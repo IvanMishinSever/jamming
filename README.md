@@ -1,1 +1,1 @@
-It is a jamming app from CodeCademy
+It is a jamming app from CodeCademy!
