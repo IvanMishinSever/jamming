@@ -13,11 +13,21 @@ export default class App extends React.Component {
       {name:'name2', artist:'artist2', album: 'album2', id: 2}, 
       {name:'name3', artist:'artist3', album: 'album3', id: 3}],
 
-      playlistTracks: [{name:'name12', artist:'artist12', album: 'album12', id: 1}, 
-      {name:'name22', artist:'artist22', album: 'album22', id: 2}, 
-      {name:'name32', artist:'artist32', album: 'album32', id: 3}],
+      playlistTracks: [{name:'name12', artist:'artist12', album: 'album12', id: 6}, 
+      {name:'name22', artist:'artist22', album: 'album22', id: 7}, 
+      {name:'name32', artist:'artist32', album: 'album32', id: 8},
+      {name:'name1', artist:'artist1', album: 'album1', id: 1}],
       playlistName: 'THE main'
 
+    }
+  }
+  addTrack(track) {
+    let tracks = this.state.playlistTracks;
+    if (tracks.find(savedTrack => savedTrack.id === track.id)) {
+      return;
+    } else {
+      tracks.push(track);
+      this.setState({playlistTracks: tracks})
     }
   }
   render() {
